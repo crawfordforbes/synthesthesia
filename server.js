@@ -1,10 +1,10 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-var sqlite3 = require("sqlite3").verbose();
+// var sqlite3 = require("sqlite3").verbose();
 var cors = require('cors');
 var request = require('request')
 
-var db = new sqlite3.Database("db/music.db");
+// var db = new sqlite3.Database("db/music.db");
 var app = express();
 
 app.use(cors());
