@@ -1,26 +1,26 @@
 {
   "name": "music",
   "version": "1.0.0",
-  "main": "server.js",
+  "description": "",
+  "main": "examples.js",
+  "dependencies": {
+    "body-parser": "^1.13.1",
+    "cors": "^2.7.1",
+    "express": "^4.13.0",
+    "ejs": "^2.3.1",
+    "request": "^2.58.0"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.13.1",
-    "ejs": "^2.3.1",
-    "express": "^4.13.0",
-    "cors": "^2.7.1",
-    "request": "^2.58.0",
-    "sqlite3": "^3.0.8"
-  },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "https://github.com/crawfordforbes/synthesthesia.git"
   },
+  "author": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/crawfordforbes/synthesthesia/issues"
   },
