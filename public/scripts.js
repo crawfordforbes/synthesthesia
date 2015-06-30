@@ -23,7 +23,7 @@ var url = document.getElementById("url");
 var submit = document.getElementById("submit");
 submit.addEventListener("click", function(){
 	var xhr = new XMLHttpRequest();
-	xhr.open("POST", "http://127.0.0.1/url")
+	xhr.open("POST", "http://104.236.55.187//url")
 	xhr.setRequestHeader("Content-Type", "application/json");
 	xhr.addEventListener("load", function(){
 		//remove line breaks etc
