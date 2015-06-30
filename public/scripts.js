@@ -1,4 +1,5 @@
-//numbers.indexOf(head[3]), convert text into an integer
+
+var ip = document.getElementById("ip").value//numbers.indexOf(head[3]), convert text into an integer
 var numbers = ["a", "b", "c", "d", "e", "f", "g", "h","i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s","t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I","J", "K", "L", "M", "N", "O", "P", "Q","R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
 //oscillator type placeholder 
@@ -23,7 +24,7 @@ var url = document.getElementById("url");
 var submit = document.getElementById("submit");
 submit.addEventListener("click", function(){
 	var xhr = new XMLHttpRequest();
-	xhr.open("POST", "http://104.236.55.187/url")
+	xhr.open("POST", ip + "url")
 	xhr.setRequestHeader("Content-Type", "application/json");
 	xhr.addEventListener("load", function(){
 		//remove line breaks etc

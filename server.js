@@ -3,7 +3,8 @@ var bodyParser = require('body-parser');
 // var sqlite3 = require("sqlite3").verbose();
 var cors = require('cors');
 var request = require('request')
-
+var ip = require('./ip.json')
+console.log(ip["ip"])
 // var db = new sqlite3.Database("db/music.db");
 var app = express();
 
@@ -12,7 +13,7 @@ app.use(bodyParser.json({ extended: false }));
 
 app.use(express.static('public'));
 app.get('/', function(req, res){
-	res.render('index.ejs')
+	res.render('index.ejs', {ip: ip["ip"]})
 });
 
 app.post('/url', function(req, res){
@@ -26,4 +27,4 @@ request.get(req.body.site, function(err, body){
 	})
 })
 
-app.listen('80')
+app.listen(ip["port"])
