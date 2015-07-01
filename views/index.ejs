@@ -2,11 +2,39 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Hear the web</title>
+	<title>100 trillion ants</title>
 </head>
 <body>
 	<input id="ip" type="hidden" value="<%= ip %>">
+	<h1>Synthesthesia</h1>
+	<h3>Create music with code</h3>
+	<p>Enter a website and hit submit to hear it's code translated to music.</p>
 	<input id="url" type="text" placeholder="website, please" value="http://">
+	
+	<p>Pick a mode</p>
+	<ul>
+		<li>
+			<input type="radio" name="tonality" value="ionian">Ionian/Major</input>
+		</li>
+		<li>
+			<input type="radio" name="tonality" value="dorian">Dorian</input>
+		</li>
+		<li>
+			<input type="radio" name="tonality" value="phrygian">Phrygian</input>
+		</li>
+		<li>
+			<input type="radio" name="tonality" value="aeolian">Aeolian/Minor</input>
+		</li>
+		<li>
+			<input type="radio" name="tonality" value="harmonicMinor">Harmonic Minor</input>
+		</li>
+		<li>
+			<input type="radio" name="tonality" value="wholeTone">Whole Tone</input>
+		</li>
+		<li>
+			<input type="radio" name="tonality" value="chromatic">Chromatic</input>
+		</li>
+	</ul>
 	<button id="submit">submit</button>
 	<!-- <button id="play">play</button>
 	<button id="stop">stop</button>
