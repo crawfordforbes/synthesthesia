@@ -3,9 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>100 trillion ants</title>
+	<link href="styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 	<input id="ip" type="hidden" value="<%= ip %>">
+	<div id="gui">
 	<h1>Synthesthesia</h1>
 	<h3>Create music with code</h3>
 	<p>Enter a website and hit submit to hear it's code translated to music.</p>
@@ -34,8 +36,12 @@
 		<li>
 			<input type="radio" name="tonality" value="chromatic">Chromatic</input>
 		</li>
+				<li>
+			<input type="radio" name="tonality" value="pentatonic">Pentatonic</input>
+		</li>
 	</ul>
 	<button id="submit">submit</button>
+</div>
 	<!-- <button id="play">play</button>
 	<button id="stop">stop</button>
 	<button id="save">save</button>
