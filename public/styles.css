@@ -1,0 +1,89 @@
+/* colors: https://color.adobe.com/Honey-Pot-color-theme-1490158/edit/?copy=true
+https://color.adobe.com/Birdfolio-Blues-color-theme-1945976/edit/?copy=true
+Darkest grey: 2B3A42;
+Dark grey: 3F5765;
+Grey: BDD4DE;
+Whitish: EFEFEF;
+Orange: FF530D;
+*/
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background-color: #EFEFEF;
+}
+
+h1 {
+	background-color: #FF530D;
+	padding-left: 5px;
+}
+
+#web_text {
+	margin: 5px;
+}
+
+#user_option {
+	width: 300px;
+	height: 100px;
+}
+
+#mode_pick {
+	margin: 5px;
+}
+
+button {
+	padding: 4px;
+	margin: 5px;
+}
+
+#mel_div {
+	padding-top: 0;
+}
+
+.synth * {
+	margin: 8px;
+}
+
+.osc_list li {
+	background-color: #A9BEC7;
+	padding: 5px;
+	width: 200px;
+	height: 400px;
+	display: inline-block;
+	/*vertical-align: top;*/
+	margin: auto;
+	overflow: scroll;
+	border: 2px lightblue solid;
+	border-radius: 8px;
+	padding: 5px;
+}
+
+.osc_main * {
+	display: inline-block;
+
+}
+
+.hidden {
+	display: none;
+}
+
+.visible {
+	display: block;
+}
+#main_nav {
+	background-color: #FF530D;
+	font-size: 24px;
+	padding: 5px;
+	margin-top: 5px;
+	width: 100%;
+	display: block;
+}
+#main_nav ul {
+	list-style: none;
+}
+
+#main_nav ul li {
+	display: inline-block;
+}

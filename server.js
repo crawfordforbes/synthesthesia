@@ -23,7 +23,14 @@ var html = ""
 
 request.get(req.body.site, function(err, body){
 	html = body;
-	res.json({html: html})
+	html = html.body.replace(/\r?\n|\r/g, "")
+	var headOpen = html.indexOf("<head>") + 6;
+	var headClose = html.indexOf("</head>")
+	var head = html.slice(headOpen, headClose).replace(/[^a-zA-Z]/g, "")
+			var bodyOpen = html.indexOf("<body>") + 6;
+		var bodyClose = html.indexOf("</body>")
+		var body = html.slice(bodyOpen, bodyClose).replace(/[^a-zA-Z]/g, "")
+	res.json({head: head, body: body})
 	})
 })
 

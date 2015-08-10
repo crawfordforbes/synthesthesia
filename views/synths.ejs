@@ -1,0 +1,405 @@
+<div id="sop_div" class="hidden synth">
+	<ul class="osc_list">
+		<h2>Soprano Oscillator</h2>
+		<li id="sop_main">
+			<h3>Wave</h3>
+			<h4>Waveform</h4>
+			<select class="sop_inp" name="sop_waveType">
+				<option value="sine">Sine</option>
+				<option value="sawtooth">Sawtooth</option>
+				<option value="square">Square</option>
+				<option value="triangle">Triangle</option>
+			</select>
+			<h4>Max Volume</h4>
+			<input class="sop_inp" id="sop_vol" type="range" min="0" max="1" value=".8" step=".1"/>
+			<h4>Panning</h4>
+			<input class="sop_inp" id="sop_pan" type="range" min="-1" max="1" value="0" step=".25"/>
+			<br>
+			
+		</li>
+		<li id="sop_env">
+			<h3>Envelope</h3>
+			<h4>Attack</h4>
+			<input class="sop_inp" id="sop_envAtt" type="range" min=".05" max=".5" value=".3" step=".05"/>
+			<h4>Decay</h4>
+			<input class="sop_inp" id="sop_envDec" type="range" min=".05" max="1" value="0" step=".05"/>
+			<h4>Sustain Volume</h4>
+			<input class="sop_inp" id="sop_envSus" type="range" min="0" max="1" value=".8" step=".05"/>
+			<h4>Hold</h4>
+			<input class="sop_inp" id="sop_envHol" type="range" min=".05" max="1" value="0" step=".05"/>
+			<h4>Release</h4>
+			<input class="sop_inp" id="sop_envRel" type="range" min="0" max="1" value=".5" step=".05"/>
+		</li>
+		<li id="sop_fil">
+			<h3>Filter</h3>
+			<h4>Power: <input id="sop_filter_tog" type="checkbox"></h4>
+			<h4>Waveform</h4>
+			<select class="sop_inp" name="sop_filterType">
+				<option value="lowpass">Low Pass</option>
+				<option value="highpass">High Pass</option>
+				<option value="bandpass">Band Pass</option>
+				<option value="notch">Band Reject</option>
+				<option value="lowshelf">Low Shelf</option>
+				<option value="highshelf">High Shelf</option>
+				<option value="peaking">Peaking</option>
+				<option value="allpass">All Pass</option>
+			</select>
+			<h4>Frequency</h4>
+			<input class="sop_inp" id="sop_filterFreq" type="text" value="600"/>
+			<h4>Q</h4>
+			<input class="sop_inp" id="sop_filterQ" type="range" min="0" max="10" value="2" step=".5"/>
+			<h4>Envelope Frequency</h4>
+			<input class="sop_inp" id="sop_filterEnvFreq" type="text" value="800"/>
+			<h4>Envelope Attack</h4>
+			<input class="sop_inp" id="sop_filterEnvAtt" type="range" min="0" max="2" value=".5" step=".25"/>
+		</li>
+		<li id="sop_del">
+			<h3>Delay</h3>
+			<h4>Power: <input id="sop_delay_tog" type="checkbox"></h4>
+			<h4>Delay Time</h4>
+			<input class="sop_inp" id="sop_delayTime" type="range" min="0" max="5" value=".2" step=".1"/>
+			<h4>Wet</h4>
+			<input class="sop_inp" id="sop_delayWet" type="range" min="0" max="2" value=".2" step=".1"/>
+			<h4>Feedback</h4>
+			<input class="sop_inp" id="sop_delayFeed" type="range" min="0" max="2" value=".2" step=".1"/>
+		</li>
+		<li id="sop-vib">
+			<h3>Vibrato</h3>
+			<h4>Power: <input id="sop_vib_tog" type="checkbox"></h4>
+			<h4>Waveform</h4>
+			<select class="sop_inp" name="sop_vibType">
+				<option value="sine">Sine</option>
+				<option value="sawtooth">Sawtooth</option>
+				<option value="square">Square</option>
+				<option value="triangle">Triangle</option>
+			</select>
+			<h4>Magnitude</h4>
+			<input class="sop_inp" id="sop_vibMag" type="range" min="0" max="10" value="1.5" step=".25"/>
+			<h4>Speed</h4>
+			<input class="sop_inp" id="sop_vibSpe" type="range" min=".1" max="10" value="1.5" step=".1"/>
+			<h4>Attack</h4>
+			<input class="sop_inp" id="sop_vibAtt" type="range" min="0" max="5" value=".75" step=".25"/>
+		</li>
+		<li id="sop_tre">
+			<h3>Tremolo</h3>
+			<h4>Power: <input id="sop_tre_tog" type="checkbox"></h4>
+			<h4>Waveform</h4>
+			<select class="sop_inp" name="sop_treType">
+				<option value="sine">Sine</option>
+				<option value="sawtooth">Sawtooth</option>
+				<option value="square">Square</option>
+				<option value="triangle">Triangle</option>
+			</select>
+			<h4>Magnitude</h4>
+			<input class="sop_inp" id="sop_treMag" type="range" min="0" max="10" value="1.5" step=".25"/>
+			<h4>Speed</h4>
+			<input class="sop_inp" id="sop_treSpe" type="range" min=".1" max="10" value="1.5" step=".1"/>
+			<h4>Attack</h4>
+			<input class="sop_inp" id="sop_treAtt" type="range" min="0" max="5" value=".75" step=".25"/>
+		</li>
+	</ul>
+</div>
+
+<div id="alt_div" class="hidden synth">
+	<ul class="osc_list">
+		<h2>Alto Oscillator</h2>
+		<li id="alt_main">
+			<h3>Wave</h3>
+			<h4>Waveform</h4>
+			<select class="alt_inp" name="alt_waveType">
+				<option value="sine">Sine</option>
+				<option value="sawtooth">Sawtooth</option>
+				<option value="square">Square</option>
+				<option value="triangle">Triangle</option>
+			</select>
+			<h4>Max Volume</h4>
+			<input class="alt_inp" id="alt_vol" type="range" min="0" max="1" value=".8" step=".1"/>
+			<h4>Panning</h4>
+			<input class="alt_inp" id="alt_pan" type="range" min="-1" max="1" value="0" step=".25"/>
+			<br>
+			
+		</li>
+		<li id="alt_env">
+			<h3>Envelope</h3>
+			<h4>Attack</h4>
+			<input class="alt_inp" id="alt_envAtt" type="range" min=".05" max=".5" value=".3" step=".05"/>
+			<h4>Decay</h4>
+			<input class="alt_inp" id="alt_envDec" type="range" min=".05" max="1" value="0" step=".05"/>
+			<h4>Sustain Volume</h4>
+			<input class="alt_inp" id="alt_envSus" type="range" min="0" max="1" value=".8" step=".05"/>
+			<h4>Hold</h4>
+			<input class="alt_inp" id="alt_envHol" type="range" min=".05" max="1" value="0" step=".05"/>
+			<h4>Release</h4>
+			<input class="alt_inp" id="alt_envRel" type="range" min="0" max="1" value=".5" step=".05"/>
+		</li>
+		<li id="alt_fil">
+			<h3>Filter</h3>
+			<h4>Power: <input id="alt_filter_tog" type="checkbox"></h4>
+			<h4>Waveform</h4>
+			<select class="alt_inp" name="alt_filterType">
+				<option value="lowpass">Low Pass</option>
+				<option value="highpass">High Pass</option>
+				<option value="bandpass">Band Pass</option>
+				<option value="notch">Band Reject</option>
+				<option value="lowshelf">Low Shelf</option>
+				<option value="highshelf">High Shelf</option>
+				<option value="peaking">Peaking</option>
+				<option value="allpass">All Pass</option>
+			</select>
+			<h4>Frequency</h4>
+			<input class="alt_inp" id="alt_filterFreq" type="text" value="600"/>
+			<h4>Q</h4>
+			<input class="alt_inp" id="alt_filterQ" type="range" min="0" max="10" value="2" step=".5"/>
+			<h4>Envelope Frequency</h4>
+			<input class="alt_inp" id="alt_filterEnvFreq" type="text" value="800"/>
+			<h4>Envelope Attack</h4>
+			<input class="alt_inp" id="alt_filterEnvAtt" type="range" min="0" max="2" value=".5" step=".25"/>
+		</li>
+		<li id="alt_del">
+			<h3>Delay</h3>
+			<h4>Power: <input id="alt_delay_tog" type="checkbox"></h4>
+			<h4>Delay Time</h4>
+			<input class="alt_inp" id="alt_delayTime" type="range" min="0" max="5" value=".2" step=".1"/>
+			<h4>Wet</h4>
+			<input class="alt_inp" id="alt_delayWet" type="range" min="0" max="2" value=".2" step=".1"/>
+			<h4>Feedback</h4>
+			<input class="alt_inp" id="alt_delayFeed" type="range" min="0" max="2" value=".2" step=".1"/>
+		</li>
+		<li id="alt-vib">
+			<h3>Vibrato</h3>
+			<h4>Power: <input id="alt_vib_tog" type="checkbox"></h4>
+			<h4>Waveform</h4>
+			<select class="alt_inp" name="alt_vibType">
+				<option value="sine">Sine</option>
+				<option value="sawtooth">Sawtooth</option>
+				<option value="square">Square</option>
+				<option value="triangle">Triangle</option>
+			</select>
+			<h4>Magnitude</h4>
+			<input class="alt_inp" id="alt_vibMag" type="range" min="0" max="10" value="1.5" step=".25"/>
+			<h4>Speed</h4>
+			<input class="alt_inp" id="alt_vibSpe" type="range" min=".1" max="10" value="1.5" step=".1"/>
+			<h4>Attack</h4>
+			<input class="alt_inp" id="alt_vibAtt" type="range" min="0" max="5" value=".75" step=".25"/>
+		</li>
+		<li id="alt_tre">
+			<h3>Tremolo</h3>
+			<h4>Power: <input id="alt_tre_tog" type="checkbox"></h4>
+			<h4>Waveform</h4>
+			<select class="alt_inp" name="alt_treType">
+				<option value="sine">Sine</option>
+				<option value="sawtooth">Sawtooth</option>
+				<option value="square">Square</option>
+				<option value="triangle">Triangle</option>
+			</select>
+			<h4>Magnitude</h4>
+			<input class="alt_inp" id="alt_treMag" type="range" min="0" max="10" value="1.5" step=".25"/>
+			<h4>Speed</h4>
+			<input class="alt_inp" id="alt_treSpe" type="range" min=".1" max="10" value="1.5" step=".1"/>
+			<h4>Attack</h4>
+			<input class="alt_inp" id="alt_treAtt" type="range" min="0" max="5" value=".75" step=".25"/>
+		</li>
+	</ul>
+</div>
+<div id="ten_div" class="hidden synth">
+	<ul class="osc_list">
+		<h2>Tenor Oscillator</h2>
+		<li id="ten_main">
+			<h3>Wave</h3>
+			<h4>Waveform</h4>
+			<select class="ten_inp" name="ten_waveType">
+				<option value="sine">Sine</option>
+				<option value="sawtooth">Sawtooth</option>
+				<option value="square">Square</option>
+				<option value="triangle">Triangle</option>
+			</select>
+			<h4>Max Volume</h4>
+			<input class="ten_inp" id="ten_vol" type="range" min="0" max="1" value=".8" step=".1"/>
+			<h4>Panning</h4>
+			<input class="ten_inp" id="ten_pan" type="range" min="-1" max="1" value="0" step=".25"/>
+			<br>
+			
+		</li>
+		<li id="ten_env">
+			<h3>Envelope</h3>
+			<h4>Attack</h4>
+			<input class="ten_inp" id="ten_envAtt" type="range" min=".05" max=".5" value=".3" step=".05"/>
+			<h4>Decay</h4>
+			<input class="ten_inp" id="ten_envDec" type="range" min=".05" max="1" value="0" step=".05"/>
+			<h4>Sustain Volume</h4>
+			<input class="ten_inp" id="ten_envSus" type="range" min="0" max="1" value=".8" step=".05"/>
+			<h4>Hold</h4>
+			<input class="ten_inp" id="ten_envHol" type="range" min=".05" max="1" value="0" step=".05"/>
+			<h4>Release</h4>
+			<input class="ten_inp" id="ten_envRel" type="range" min="0" max="1" value=".5" step=".05"/>
+		</li>
+		<li id="ten_fil">
+			<h3>Filter</h3>
+			<h4>Power: <input id="ten_filter_tog" type="checkbox"></h4>
+			<h4>Waveform</h4>
+			<select class="ten_inp" name="ten_filterType">
+				<option value="lowpass">Low Pass</option>
+				<option value="highpass">High Pass</option>
+				<option value="bandpass">Band Pass</option>
+				<option value="notch">Band Reject</option>
+				<option value="lowshelf">Low Shelf</option>
+				<option value="highshelf">High Shelf</option>
+				<option value="peaking">Peaking</option>
+				<option value="allpass">All Pass</option>
+			</select>
+			<h4>Frequency</h4>
+			<input class="ten_inp" id="ten_filterFreq" type="text" value="600"/>
+			<h4>Q</h4>
+			<input class="ten_inp" id="ten_filterQ" type="range" min="0" max="10" value="2" step=".5"/>
+			<h4>Envelope Frequency</h4>
+			<input class="ten_inp" id="ten_filterEnvFreq" type="text" value="800"/>
+			<h4>Envelope Attack</h4>
+			<input class="ten_inp" id="ten_filterEnvAtt" type="range" min="0" max="2" value=".5" step=".25"/>
+		</li>
+		<li id="ten_del">
+			<h3>Delay</h3>
+			<h4>Power: <input id="ten_delay_tog" type="checkbox"></h4>
+			<h4>Delay Time</h4>
+			<input class="ten_inp" id="ten_delayTime" type="range" min="0" max="5" value=".2" step=".1"/>
+			<h4>Wet</h4>
+			<input class="ten_inp" id="ten_delayWet" type="range" min="0" max="2" value=".2" step=".1"/>
+			<h4>Feedback</h4>
+			<input class="ten_inp" id="ten_delayFeed" type="range" min="0" max="2" value=".2" step=".1"/>
+		</li>
+		<li id="ten-vib">
+			<h3>Vibrato</h3>
+			<h4>Power: <input id="ten_vib_tog" type="checkbox"></h4>
+			<h4>Waveform</h4>
+			<select class="ten_inp" name="ten_vibType">
+				<option value="sine">Sine</option>
+				<option value="sawtooth">Sawtooth</option>
+				<option value="square">Square</option>
+				<option value="triangle">Triangle</option>
+			</select>
+			<h4>Magnitude</h4>
+			<input class="ten_inp" id="ten_vibMag" type="range" min="0" max="10" value="1.5" step=".25"/>
+			<h4>Speed</h4>
+			<input class="ten_inp" id="ten_vibSpe" type="range" min=".1" max="10" value="1.5" step=".1"/>
+			<h4>Attack</h4>
+			<input class="ten_inp" id="ten_vibAtt" type="range" min="0" max="5" value=".75" step=".25"/>
+		</li>
+		<li id="ten_tre">
+			<h3>Tremolo</h3>
+			<h4>Power: <input id="ten_tre_tog" type="checkbox"></h4>
+			<h4>Waveform</h4>
+			<select class="ten_inp" name="ten_treType">
+				<option value="sine">Sine</option>
+				<option value="sawtooth">Sawtooth</option>
+				<option value="square">Square</option>
+				<option value="triangle">Triangle</option>
+			</select>
+			<h4>Magnitude</h4>
+			<input class="ten_inp" id="ten_treMag" type="range" min="0" max="10" value="1.5" step=".25"/>
+			<h4>Speed</h4>
+			<input class="ten_inp" id="ten_treSpe" type="range" min=".1" max="10" value="1.5" step=".1"/>
+			<h4>Attack</h4>
+			<input class="ten_inp" id="ten_treAtt" type="range" min="0" max="5" value=".75" step=".25"/>
+		</li>
+	</ul>
+</div>
+<div id="bas_div" class="hidden synth">
+	<ul class="osc_list">
+		<h2>Bass Oscillator</h2>
+		<li id="bas_main">
+			<h3>Wave</h3>
+			<h4>Waveform</h4>
+			<select class="bas_inp" name="bas_waveType">
+				<option value="sine">Sine</option>
+				<option value="sawtooth">Sawtooth</option>
+				<option value="square">Square</option>
+				<option value="triangle">Triangle</option>
+			</select>
+			<h4>Max Volume</h4>
+			<input class="bas_inp" id="bas_vol" type="range" min="0" max="1" value=".8" step=".1"/>
+			<h4>Panning</h4>
+			<input class="bas_inp" id="bas_pan" type="range" min="-1" max="1" value="0" step=".25"/>
+			<br>
+			
+		</li>
+		<li id="bas_env">
+			<h3>Envelope</h3>
+			<h4>Attack</h4>
+			<input class="bas_inp" id="bas_envAtt" type="range" min=".05" max=".5" value=".3" step=".05"/>
+			<h4>Decay</h4>
+			<input class="bas_inp" id="bas_envDec" type="range" min=".05" max="1" value="0" step=".05"/>
+			<h4>Sustain Volume</h4>
+			<input class="bas_inp" id="bas_envSus" type="range" min="0" max="1" value=".8" step=".05"/>
+			<h4>Hold</h4>
+			<input class="bas_inp" id="bas_envHol" type="range" min=".05" max="1" value="0" step=".05"/>
+			<h4>Release</h4>
+			<input class="bas_inp" id="bas_envRel" type="range" min="0" max="1" value=".5" step=".05"/>
+		</li>
+		<li id="bas_fil">
+			<h3>Filter</h3>
+			<h4>Power: <input id="bas_filter_tog" type="checkbox"></h4>
+			<h4>Waveform</h4>
+			<select class="bas_inp" name="bas_filterType">
+				<option value="lowpass">Low Pass</option>
+				<option value="highpass">High Pass</option>
+				<option value="bandpass">Band Pass</option>
+				<option value="notch">Band Reject</option>
+				<option value="lowshelf">Low Shelf</option>
+				<option value="highshelf">High Shelf</option>
+				<option value="peaking">Peaking</option>
+				<option value="allpass">All Pass</option>
+			</select>
+			<h4>Frequency</h4>
+			<input class="bas_inp" id="bas_filterFreq" type="text" value="600"/>
+			<h4>Q</h4>
+			<input class="bas_inp" id="bas_filterQ" type="range" min="0" max="10" value="2" step=".5"/>
+			<h4>Envelope Frequency</h4>
+			<input class="bas_inp" id="bas_filterEnvFreq" type="text" value="800"/>
+			<h4>Envelope Attack</h4>
+			<input class="bas_inp" id="bas_filterEnvAtt" type="range" min="0" max="2" value=".5" step=".25"/>
+		</li>
+		<li id="bas_del">
+			<h3>Delay</h3>
+			<h4>Power: <input id="bas_delay_tog" type="checkbox"></h4>
+			<h4>Delay Time</h4>
+			<input class="bas_inp" id="bas_delayTime" type="range" min="0" max="5" value=".2" step=".1"/>
+			<h4>Wet</h4>
+			<input class="bas_inp" id="bas_delayWet" type="range" min="0" max="2" value=".2" step=".1"/>
+			<h4>Feedback</h4>
+			<input class="bas_inp" id="bas_delayFeed" type="range" min="0" max="2" value=".2" step=".1"/>
+		</li>
+		<li id="bas-vib">
+			<h3>Vibrato</h3>
+			<h4>Power: <input id="bas_vib_tog" type="checkbox"></h4>
+			<h4>Waveform</h4>
+			<select class="bas_inp" name="bas_vibType">
+				<option value="sine">Sine</option>
+				<option value="sawtooth">Sawtooth</option>
+				<option value="square">Square</option>
+				<option value="triangle">Triangle</option>
+			</select>
+			<h4>Magnitude</h4>
+			<input class="bas_inp" id="bas_vibMag" type="range" min="0" max="10" value="1.5" step=".25"/>
+			<h4>Speed</h4>
+			<input class="bas_inp" id="bas_vibSpe" type="range" min=".1" max="10" value="1.5" step=".1"/>
+			<h4>Attack</h4>
+			<input class="bas_inp" id="bas_vibAtt" type="range" min="0" max="5" value=".75" step=".25"/>
+		</li>
+		<li id="bas_tre">
+			<h3>Tremolo</h3>
+			<h4>Power: <input id="bas_tre_tog" type="checkbox"></h4>
+			<h4>Waveform</h4>
+			<select class="bas_inp" name="bas_treType">
+				<option value="sine">Sine</option>
+				<option value="sawtooth">Sawtooth</option>
+				<option value="square">Square</option>
+				<option value="triangle">Triangle</option>
+			</select>
+			<h4>Magnitude</h4>
+			<input class="bas_inp" id="bas_treMag" type="range" min="0" max="10" value="1.5" step=".25"/>
+			<h4>Speed</h4>
+			<input class="bas_inp" id="bas_treSpe" type="range" min=".1" max="10" value="1.5" step=".1"/>
+			<h4>Attack</h4>
+			<input class="bas_inp" id="bas_treAtt" type="range" min="0" max="5" value=".75" step=".25"/>
+		</li>
+	</ul>
+</div>

@@ -2,51 +2,50 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>100 trillion ants</title>
+	<title>Synthesthesia</title>
 	<link href="styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 	<input id="ip" type="hidden" value="<%= ip %>">
-	<div id="gui">
-	<h1>Synthesthesia</h1>
-	<h3>Create music with code</h3>
-	<p>Enter a website and hit submit to hear it's code translated to music.</p>
-	<input id="url" type="text" placeholder="website, please" value="http://">
+			<h1>SYNTHESTHESIA</h1>
+
+
+
+	<% include melody %>
+
+<!-- 	<button id="play">play</button> -->
+<!-- 	<button id="loop">loop</button> -->
+		<nav id="main_nav">
+		<ul>
+			<li class="nav" id="nav_sop">Soprano</li>
+			<li class="nav" id="nav_alt">Alto</li>
+			<li class="nav" id="nav_ten">Tenor</li>
+			<li class="nav" id="nav_bas">Bass</li>
+			<li class="nav" id="nav_all">See All</li>
+		</ul>
+	</nav>
+	<% include synths %>
 	
-	<p>Pick a mode</p>
-	<ul>
-		<li>
-			<input type="radio" name="tonality" value="ionian">Ionian/Major</input>
-		</li>
-		<li>
-			<input type="radio" name="tonality" value="dorian" checked>Dorian</input>
-		</li>
-		<li>
-			<input type="radio" name="tonality" value="phrygian">Phrygian</input>
-		</li>
-		<li>
-			<input type="radio" name="tonality" value="aeolian">Aeolian/Minor</input>
-		</li>
-		<li>
-			<input type="radio" name="tonality" value="harmonicMinor">Harmonic Minor</input>
-		</li>
-		<li>
-			<input type="radio" name="tonality" value="wholeTone">Whole Tone</input>
-		</li>
-		<li>
-			<input type="radio" name="tonality" value="chromatic">Chromatic</input>
-		</li>
-				<li>
-			<input type="radio" name="tonality" value="pentatonic">Pentatonic</input>
-		</li>
-	</ul>
-	<button id="submit">submit</button>
-</div>
+
+
+
+<div id="soprano">
+	</div>
+	<div id="alto">
+	</div>
+	<div id="tenor">
+	</div>
+	<div id="bass">
+	</div>
+
 	<!-- <button id="play">play</button>
 	<button id="stop">stop</button>
 	<button id="save">save</button>
 	<button id="load">load</button> -->
 	<script type="text/javascript" src="wad-min.js"></script>
-	<script type="text/javascript" src="scripts.js"></script>
+		<script type="text/javascript" src="objects.js"></script>
+	<script type="text/javascript" src="synths.js"></script>
+	<script type="text/javascript" src="nav.js"></script>
+		<script type="text/javascript" src="notation.js"></script>
 </body>
 </html>
