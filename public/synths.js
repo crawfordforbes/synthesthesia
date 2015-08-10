@@ -8,24 +8,26 @@ var playAll = function(){
 	//go through each note of each synth and pass it to .play()
 	console.log("playAll")
 	score.soprano.part.forEach(function(note){
-		score.soprano.synth.play({pitch: note[0], wait: note[1], label: "label"})
+		score.soprano.synth.play({pitch: note[0], wait: note[1], label: note[2]})
 	})
 	score.alto.part.forEach(function(note){
-		score.alto.synth.play({pitch: note[0], wait: note[1], label: "label"})
+		score.alto.synth.play({pitch: note[0], wait: note[1], label: note[2]})
 	})
 	score.tenor.part.forEach(function(note){
-		score.tenor.synth.play({pitch: note[0], wait: note[1], label: "label"})
+		score.tenor.synth.play({pitch: note[0], wait: note[1], label: note[2]})
 	})
 	score.bass.part.forEach(function(note){
-		score.bass.synth.play({pitch: note[0], wait: note[1], label: "label"})
+		score.bass.synth.play({pitch: note[0], wait: note[1], label: note[2]})
 	})
 }
 
 var stopAll = function(){
+	for(var s = 0; s < 100; s++){
 	score.soprano.synth.stop("label");
 	score.alto.synth.stop("label");
 	score.tenor.synth.stop("label");
 	score.bass.synth.stop("label");
+}
 	console.log("stop?")
 }
 var stopButton = document.getElementById("stop")

@@ -272,6 +272,6 @@ var melodyMaker = function(voice, scaleChoice, string, part){
 		}
 		console.log(voice + " is playing note " + thisNote + " after waiting " + thisWait + " seconds.");
 		//add created note to score
-		part.push([thisNote, thisWait]);
+		part.push([thisNote, thisWait, "label"]);
 	}
 }

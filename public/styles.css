@@ -9,6 +9,7 @@ Orange: FF530D;
 * {
 	margin: 0px;
 	padding: 0px;
+	color: #2B3A42;
 }
 
 body {
@@ -85,5 +86,15 @@ button {
 }
 
 #main_nav ul li {
+	padding: 5px;
 	display: inline-block;
+}
+
+.nav:hover {
+	background-color: #2B3A42;
+	color: #EFEFEF;
+}
+
+.temp {
+	margin: 5px;
 }
