@@ -21,6 +21,9 @@ h1 {
 	padding-left: 5px;
 }
 
+.grey {
+	background-color: #BDD4DE;
+}
 #web_text {
 	margin: 5px;
 }
@@ -28,6 +31,7 @@ h1 {
 #user_option {
 	width: 300px;
 	height: 100px;
+	padding: 3px;
 }
 
 #mode_pick {
@@ -47,11 +51,15 @@ button {
 	margin: 8px;
 }
 
+.synth h2 {
+	margin: 5px;
+}
+
 .osc_list li {
 	background-color: #A9BEC7;
 	padding: 5px;
 	width: 200px;
-	height: 400px;
+	height: 430px;
 	display: inline-block;
 	/*vertical-align: top;*/
 	margin: auto;
@@ -76,7 +84,7 @@ button {
 #main_nav {
 	background-color: #FF530D;
 	font-size: 24px;
-	padding: 5px;
+/*	padding: 5px;*/
 	margin-top: 5px;
 	width: 100%;
 	display: block;
@@ -93,6 +101,7 @@ button {
 .nav:hover {
 	background-color: #2B3A42;
 	color: #EFEFEF;
+	border-radius: 5px;
 }
 
 .temp {

@@ -22,7 +22,7 @@ var playAll = function(){
 }
 
 var stopAll = function(){
-	for(var s = 0; s < 100; s++){
+	for(var s = 0; s < 200; s++){
 	score.soprano.synth.stop("label");
 	score.alto.synth.stop("label");
 	score.tenor.synth.stop("label");
