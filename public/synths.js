@@ -6,25 +6,38 @@
 
 var playAll = function(){
 	//go through each note of each synth and pass it to .play()
+	console.log("playAll")
 	score.soprano.part.forEach(function(note){
-		score.soprano.synth.play({pitch: note[0], wait: note[1]})
+		score.soprano.synth.play({pitch: note[0], wait: note[1], label: "label"})
 	})
 	score.alto.part.forEach(function(note){
-		score.alto.synth.play({pitch: note[0], wait: note[1]})
+		score.alto.synth.play({pitch: note[0], wait: note[1], label: "label"})
 	})
 	score.tenor.part.forEach(function(note){
-		score.tenor.synth.play({pitch: note[0], wait: note[1]})
+		score.tenor.synth.play({pitch: note[0], wait: note[1], label: "label"})
 	})
 	score.bass.part.forEach(function(note){
-		score.bass.synth.play({pitch: note[0], wait: note[1]})
+		score.bass.synth.play({pitch: note[0], wait: note[1], label: "label"})
 	})
 }
 
-//trigger playAll() when the play button is clicked
-// var playButton = document.getElementById("play")
-// playButton.addEventListener("click", function(){
-// 	playAll()
-// })
+var stopAll = function(){
+	score.soprano.synth.stop("label");
+	score.alto.synth.stop("label");
+	score.tenor.synth.stop("label");
+	score.bass.synth.stop("label");
+	console.log("stop?")
+}
+var stopButton = document.getElementById("stop")
+stopButton.addEventListener("click", function(){
+	stopAll()
+})
+
+// trigger playAll() when the play button is clicked
+var playButton = document.getElementById("play")
+playButton.addEventListener("click", function(){
+	playAll()
+})
 
 //when loop button is clicked, trigger playAll() repeatedly until loop button is clicked again
 // var playLoop = function(){

@@ -48,7 +48,7 @@ var text_to_sound = function(){
 		setSynths(input);
 		stringSlicer(input, scale);
 		synthUpdate();
-		playAll();
+
 	} else {
 		console.log("hmm")
 	}
@@ -70,7 +70,7 @@ var ajax_request = function(){
 		//create notes from body of response
 		stringSlicer(response.body, scale);
 		synthUpdate();
-		setTimeout(playAll, 1000);
+
 	})
 	var site = JSON.stringify({site: user_input.value})
 	xhr.send(site)
