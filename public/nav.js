@@ -25,7 +25,7 @@ nav_all.addEventListener('click', function(){
 document.getElementById("alt_div").className = "visible synth"
 document.getElementById("ten_div").className = "visible synth"
 document.getElementById("bas_div").className = "visible synth"
-document.getElementById("mel_div").className = "visible synth"
+
 })
 window.onload = function(){
 	document.getElementById("sop_div").className = "visible synth"
