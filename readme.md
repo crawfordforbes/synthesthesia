@@ -1,6 +1,3 @@
-#Synthesthesia 
-A composition tool that converts text or websites into sound.
-
 ##[synthesthesia.co](http://synthesthesia.co)
 Simply enter a url or text and choose a mode. Make any changes to any of the four oscillators and hit play.
 
