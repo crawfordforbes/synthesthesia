@@ -1,13 +1,9 @@
 #Synthesthesia 
-A composition tool that converts html into "music".
+A composition tool that converts text or websites into sound.
 
-##Demo
-The demo can be found [here](http://104.236.55.187/). Enter a url and click submit!
+##[synthesthesia.co](http://synthesthesia.co)
+Simply enter a url or text and choose a mode. Make any changes to any of the four oscillators and hit play.
 
-##Stuff used so far
-- Node
-	- express
-	- request
-	- etc etc
-- [Wad](https://github.com/rserota/wad)
+##Technologies used
+Synthesthesia's back end is an express server. It also uses the request, ejs, cors, and body-parser modules. The front end only uses vanilla JavaScript and the [WAD library](https://github.com/rserota/wad).
 

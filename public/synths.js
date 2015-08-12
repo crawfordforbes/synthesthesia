@@ -21,19 +21,19 @@ var playAll = function(){
 	})
 }
 
-var stopAll = function(){
-	for(var s = 0; s < 200; s++){
-	score.soprano.synth.stop("label");
-	score.alto.synth.stop("label");
-	score.tenor.synth.stop("label");
-	score.bass.synth.stop("label");
-}
-	console.log("stop?")
-}
-var stopButton = document.getElementById("stop")
-stopButton.addEventListener("click", function(){
-	stopAll()
-})
+// var stopAll = function(){
+// 	for(var s = 0; s < 200; s++){
+// 	score.soprano.synth.stop("label");
+// 	score.alto.synth.stop("label");
+// 	score.tenor.synth.stop("label");
+// 	score.bass.synth.stop("label");
+// }
+// 	console.log("stop?")
+// }
+// var stopButton = document.getElementById("stop")
+// stopButton.addEventListener("click", function(){
+// 	stopAll()
+// })
 
 // trigger playAll() when the play button is clicked
 var playButton = document.getElementById("play")
